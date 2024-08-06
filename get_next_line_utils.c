@@ -2,19 +2,19 @@
 
 int	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(str && str[i])
+	while (str && str[i])
 		i++;
 	return (i);
 }
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new;
-	int	totalsize;
-	int	i;
-	int	j;
+	int		totalsize;
+	int		i;
+	int		j;
 	
 	i = 0;
 	totalsize = ft_strlen(s1) + ft_strlen(s2);
@@ -52,11 +52,11 @@ int	to_find_newline(char *str)
 	return (-1);
 }
 
- void to_clear_buffer(char *s1)
+void	to_clear_buffer(char *s1)
 {
 	char	*new;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -72,12 +72,9 @@ int	to_find_newline(char *str)
 		j++;
 	}
 	new[j] = '\0';
-	i = 0;
-	while (new[i])
-	{
+	i = -1;
+	while (new[++i])
 		s1[i] = new[i];
-		i++;
-	}
 	s1[i] = '\0';
 	free(new);
  }
