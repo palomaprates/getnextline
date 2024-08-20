@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/15 11:10:25 by pprates-          #+#    #+#             */
+/*   Updated: 2024/08/15 11:14:23 by pprates-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 int	ft_strlen(const char *str)
@@ -9,13 +21,14 @@ int	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*new;
 	int		totalsize;
 	int		i;
 	int		j;
-	
+
 	i = 0;
 	totalsize = ft_strlen(s1) + ft_strlen(s2);
 	new = malloc(sizeof(char) * (totalsize + 1));
@@ -31,7 +44,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	{
 		new[i] = s2[j];
 		if (++i && s2[j++] == '\n')
-			break;
+			break ;
 	}
 	new[i] = '\0';
 	free(s1);
@@ -77,7 +90,4 @@ void	to_clear_buffer(char *s1)
 		s1[i] = new[i];
 	s1[i] = '\0';
 	free(new);
- }
-
-
- 
+}

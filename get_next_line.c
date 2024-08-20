@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pprates- <pprates-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/15 11:10:15 by pprates-          #+#    #+#             */
+/*   Updated: 2024/08/15 11:12:03 by pprates-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*get_next_line(int fd)
@@ -31,7 +43,7 @@ char	*get_next_line(int fd)
 
 // int	main()
 // {
-// 	int fd = open("test.txt", O_RDONLY);
+// 	int fd = open("teste.txt", O_RDONLY);
 // 	int	i = 0;
 // 	char *test;
 // 	while (i < 6)
